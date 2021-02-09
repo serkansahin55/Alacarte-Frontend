@@ -4,7 +4,7 @@ import StarRating from "./StarRating";
 function ReviewForm({ setReviews, reviews, showReviewForm, setShowReviewForm}) {
 
   const [text, setText] = useState('');
-  const [rating, setRating] = useState(1);
+  const [rating, setRating] = useState(0);
 
   function handleCancel(){
     setShowReviewForm(!showReviewForm);

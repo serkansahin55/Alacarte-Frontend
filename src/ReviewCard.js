@@ -6,9 +6,9 @@ function ReviewCard({text, rating, username}) {
         <div>            
             <h2>Description: {text}</h2>
             <h3>Rated By: {username}</h3>
-            <h3>Rating: <StarRating totalStars={5} currentRating={rating} displayStar={true} /></h3>
+            <h3><StarRating totalStars={5} currentRating={rating} displayStar={true} /></h3>
             <hr />
-        </div>        
+        </div>   
     )
 }
 
