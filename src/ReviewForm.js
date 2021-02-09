@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import StarRating from "./StarRating";
 
 function ReviewForm({ setReviews, reviews, showReviewForm, setShowReviewForm}) {
 
@@ -40,8 +41,7 @@ function ReviewForm({ setReviews, reviews, showReviewForm, setShowReviewForm}) {
         <h3>Submit Your Review</h3>
         <form className="note-editor">
         <label htmlFor='rating'>
-            Rating:
-            <input onChange={(e) => setRating(e.target.value)} type="text" label='Rating' name="rating" value={rating} />
+            <StarRating totalStars={5} currentRating={rating} setRating={setRating} />
         </label>
         <label htmlFor='text'>
             Text:
