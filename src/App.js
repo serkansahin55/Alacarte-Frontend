@@ -1,10 +1,8 @@
-import React from "react"
+import React from "react";
 import './App.css';
-import LinksContainer from "./LinksContainer"
-import MenuItemsContainer from "./MenuItemsContainer"
-import Navbar from "./Navbar";
-import Reviews from "./Reviews";
-
+import LinksContainer from "./LinksContainer";
+import MenuItemsContainer from "./MenuItemsContainer";
+import ReviewsContainer from "./ReviewsContainer";
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -15,10 +13,10 @@ function App() {
         <Switch>          
           <Route exact path='/' component={LinksContainer} />
           <Route exact path='/menu_items' component={MenuItemsContainer} />
-          <Route exact path='/reviews' component={Reviews} />
+          <Route exact path='/reviews' component={ReviewsContainer} />
         </Switch>
       </Router>
-    </div>  
+    </div>
   );
 }
 
