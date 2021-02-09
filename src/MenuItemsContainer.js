@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react"
-import ItemCard from "./ItemCard"
+import ItemCard from "./ItemCard";
+import Navbar from "./Navbar";
 
 
 function MenuItemsContainer() {
@@ -8,7 +9,7 @@ function MenuItemsContainer() {
 
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/v1/menu_items")
+        fetch("http://localhost:4000/api/v1/menu_items")
           .then((r) => r.json())
           .then(menuItems => {
             setMenuItems(menuItems)
@@ -22,9 +23,12 @@ function MenuItemsContainer() {
 
 
     return (
+      <div>
+        <Navbar />
         <ul>
             {menItems}
         </ul>
+      </div>
     )
 }
 

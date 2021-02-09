@@ -1,17 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
-  const links = ["Home", "Menu", "Reviews", "About Us"];
-
-  const anchors = links.map((link) => (
-    <a key={link} href={link}>
-      {link}
-    </a>
-  ));
   return (
     <nav>
         <h1>AlaCarte Restaurant</h1>
-      {anchors}
+      <ul>
+        <li> 
+          <Link to='/'> Home </Link> 
+        </li>
+        <li> 
+          <Link to='/menu_items'> Menu Items </Link> 
+        </li>        
+        <li> 
+          <Link to='/reviews'> Reviews </Link> 
+        </li>
+        <li> 
+          <Link to='/about_us'> About Us </Link>
+        </li>        
+      </ul>
     </nav>
   )
 }
