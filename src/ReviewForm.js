@@ -45,7 +45,7 @@ function ReviewForm({ setReviews, reviews, showReviewForm, setShowReviewForm}) {
         </label>
         <label htmlFor='text'>
             Text:
-            <textarea onChange={(e) => setText(e.target.value)}name="text" value={text} />
+            <textarea onChange={(e) => setText(e.target.value)} value={text} />
         </label>        
         <div className="button-row">
             <input onClick={handleSave} className="button" type="submit" value="Save" />

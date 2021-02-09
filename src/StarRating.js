@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 
 const Star = ({ selected = false, onClick = f => f }) => (
   <div className={selected ? "star selected" : "star"} onClick={onClick} />

@@ -7,8 +7,8 @@ function LinksContainer() {
         <div>
             <Navbar />        
             <h1><Link to='/about_us'> Call to Place an Order! </Link></h1> 
-            <h1>Check out our Menu!</h1>
-            <h1>Open 7 days!</h1>
+            <h1><Link to='/menu_items'> Check out our Menu! </Link></h1> 
+            <h1><Link to='/about_us'> Open 7 days! </Link></h1> 
         </div>     
     )
 }
