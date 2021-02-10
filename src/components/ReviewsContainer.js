@@ -19,7 +19,7 @@ function ReviewsContainer() {
 
 
       const reviewItems = reviews.map((item) => {
-        return <ReviewCard key={item.id} username={item.user.username} text={item.text} rating={item.rating}/>
+        return <ReviewCard id={item.id} key={item.id} username={item.user.username} text={item.text} rating={item.rating} reviews={reviews} setReviews={setReviews} />
       })
 
       const handleAddReview = () => {
