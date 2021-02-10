@@ -19,17 +19,21 @@ function MenuItemsContainer() {
       return item.name.toLowerCase().includes(itemSearch.toLowerCase())
     })
 
+    function fetchMenuItems() {
+      fetch("http://localhost:4000/api/v1/menu_items")
+      .then((r) => r.json())
+      .then(menuItems => {
+        setMenuItems(menuItems)
+      })
+    }
+
     useEffect(() => {
-        fetch("http://localhost:4000/api/v1/menu_items")
-          .then((r) => r.json())
-          .then(menuItems => {
-            setMenuItems(menuItems)
-          })
+      fetchMenuItems()
       }, [])
 
 
       const menItems = filteredItems.map((item) => {
-        return <ItemCard key={item.id} name={item.name} image={item.image} description={item.description} price={item.price}/>
+        return <ItemCard id={item.id} key={item.id} name={item.name} image={item.image} description={item.description} price={item.price} favorited={item.favorited} fetchMenuItems={fetchMenuItems} />
       })
 
 

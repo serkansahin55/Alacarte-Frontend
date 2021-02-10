@@ -40,17 +40,17 @@ function ReviewForm({ setReviews, reviews, showReviewForm, setShowReviewForm}) {
       <div>
         <h3>Submit Your Review</h3>
         <form className="note-editor">
-        <label htmlFor='rating'>
-            <StarRating totalStars={5} currentRating={rating} setRating={setRating} />
-        </label>
-        <label htmlFor='text'>
-            Text:
-            <textarea onChange={(e) => setText(e.target.value)} value={text} />
-        </label>        
-        <div className="button-row">
-            <input onClick={handleSave} className="button" type="submit" value="Save" />
-            <button onClick={handleCancel} type="button">Cancel</button>
-        </div>
+          <label htmlFor='rating'>
+              <StarRating totalStars={5} currentRating={rating} setRating={setRating} />
+          </label>
+          <label htmlFor='text'>
+              Text:
+              <textarea onChange={(e) => setText(e.target.value)} value={text} />
+          </label>        
+          <div className="button-row">            
+              <button onClick={handleSave} type="button">Save</button>
+              <button onClick={handleCancel} type="button">Cancel</button>
+          </div>
         </form>
       </div>
   );

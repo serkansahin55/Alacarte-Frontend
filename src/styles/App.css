@@ -230,3 +230,19 @@ button:focus, input[type="submit"]:focus {
     flex-basis: 100%;
     text-align: center;
   }
+
+  .button.favorite {
+    background: red; 
+    color: rgb(255, 255, 255);
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid black;
+ }
+
+ .button.non-favorite {
+  background: rgb(44, 41, 41); 
+  color: rgb(212, 193, 193);
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
