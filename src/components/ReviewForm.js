@@ -17,8 +17,8 @@ function ReviewForm({ setReviews, reviews, showReviewForm, setShowReviewForm}) {
         "review": {
             "text": text,
             "rating": rating,
-            "user_id": 7,
-            "restaurant_id": 20
+            "user_id": 3,
+            "restaurant_id": 2
         }
     }
 

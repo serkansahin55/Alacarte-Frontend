@@ -17,8 +17,8 @@ function EditReviewForm({ setReviews, reviews, showEditReviewForm, setEditReview
         "review": {
             "text": editedText,
             "rating": editedRating,
-            "user_id": 7,
-            "restaurant_id": 20
+            "user_id": 3,
+            "restaurant_id": 2
         }
     }
 

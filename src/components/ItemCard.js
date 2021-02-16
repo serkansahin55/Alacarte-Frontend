@@ -8,7 +8,7 @@ function ItemCard({id, name, image, description, price, favorited, fetchMenuItem
         const data = {
             "favorite": {                
                 "menu_item_id": id,
-                "user_id": 7
+                "user_id": 3
             }
         }
     
@@ -31,7 +31,7 @@ function ItemCard({id, name, image, description, price, favorited, fetchMenuItem
         const data = {
             "favorite": {                
                 "menu_item_id": id,
-                "user_id": 7
+                "user_id": 3
             }
         }
     
