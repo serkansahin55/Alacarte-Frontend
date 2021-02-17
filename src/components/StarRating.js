@@ -29,6 +29,7 @@ const StarRating = ({ totalStars, currentRating, setRating, displayStar }) => {
             onClick={() => updateRating(i + 1)}
         />)
       ))}
+      <br />
       <p>
         {starsSelected} of {totalStars} stars    
       </p>

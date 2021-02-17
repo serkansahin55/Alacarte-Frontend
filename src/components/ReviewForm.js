@@ -37,7 +37,7 @@ function ReviewForm({ setReviews, reviews, showReviewForm, setShowReviewForm}) {
   }
 
   return (
-      <div>
+      <div class="review-form">
         <h3>Submit Your Review</h3>
         <form className="note-editor">
           <label htmlFor='rating'>

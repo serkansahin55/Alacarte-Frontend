@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react";
 import ItemCard from "./ItemCard";
 import Navbar from "./Navbar";
-import Search from "./Search"
-
+import styled from "styled-components"
 
 function MenuItemsContainer() {
 
@@ -40,6 +39,7 @@ function MenuItemsContainer() {
     return (
       <div>
         <Navbar />
+        <H1>Menu</H1>
         <input type="text" placeholder="Search..." onChange={e => setItemSearch(e.target.value)} />
         <ul>
             {menItems}
@@ -49,3 +49,12 @@ function MenuItemsContainer() {
 }
 
 export default MenuItemsContainer
+
+const H1 = styled.h1`
+    font-size: 3rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    background-color: orange;
+`

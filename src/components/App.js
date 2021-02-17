@@ -5,10 +5,17 @@ import MenuItemsContainer from "./MenuItemsContainer";
 import ReviewsContainer from "./ReviewsContainer";
 import AboutUsContainer from "./AboutUsContainer"
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { GlobalStyle } from "../globalstyles";
+import ImgBg from '../images/pizza-3.jpg';
+import styled from "styled-components"
+import Navbar from "./Navbar"
+
+
+
 
 function App() {
   return (
-    <div className="App">      
+    <div style={{backgroundColor: "black"}} >   
       <hr />
       <Router>
         <Switch>          
@@ -23,5 +30,15 @@ function App() {
 }
 
 export default App;
-    
-      
+
+const Pizza = styled.div`
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+    url(${ImgBg});
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+`;
+
+
+
+

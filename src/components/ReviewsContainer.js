@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import Navbar from "./Navbar";
 import ReviewCard from "./ReviewCard";
 import ReviewForm from "./ReviewForm";
+import styled from "styled-components"
 
 function ReviewsContainer() {
 
@@ -29,12 +30,24 @@ function ReviewsContainer() {
     return(
         <div>
             <Navbar />
-            <h1>Reviews</h1>
+            <H1 style={{color: 'black'}}>Reviews</H1>
+            <br></br>
+            <hr></hr>
+            <hr></hr>
             {reviewItems}
-            <button onClick={handleAddReview} type="button">Add a Review</button>
+            <button className="add-button" onClick={handleAddReview} type="button">Add a Review</button>
             {showReviewForm ? <ReviewForm reviews={reviews} setReviews={setReviews} showReviewForm={showReviewForm} setShowReviewForm={setShowReviewForm} /> : null}
         </div>
     )
 }
 
 export default ReviewsContainer;
+
+const H1 = styled.h1`
+    font-size: 3rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    background-color: orange;
+`

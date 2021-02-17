@@ -48,21 +48,21 @@ function ItemCard({id, name, image, description, price, favorited, fetchMenuItem
           })
     }
     return (
-        <>
-            <h2>
+        <li className="items">
+            <h2 className="h2ele">
                 Name: {name} <span></span>
                 {
                 favorited ? 
-                    <button className="button favorite" onClick={handleUnFavorite} type="button">Unfavorite It!</button>
+                    <button className="button-non-favorite" onClick={handleUnFavorite} type="button">Unfavorite It!</button>
                     : 
-                    <button className="button non-favorite" onClick={handleFavorite} type="button">Favorite It!</button>
+                    <button className="button" onClick={handleFavorite} type="button">Favorite It!</button>
                 }
             </h2>
             <img src={image} alt={name} style={{width: "200px"}} /> 
-            <h2>Description: {description}</h2>
-            <h2>${price}</h2>
+            <h2 className="h2ele">Description: {description}</h2>
+            <h2 className="h2ele">${price}</h2>
             <hr />
-        </>
+        </li>
     )
 }
 

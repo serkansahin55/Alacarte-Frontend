@@ -1,22 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AuthNav from "./auth-nav"
+import styled from "styled-components"
+
 
 function NavBar() {
 
-  // const AuthNav = () => {
-  //   const { isAuthenticated } = useAuth0()
 
-  //   return (
-  //     <Nav>
-  //       {isAuthenticated ? <LogoutButton /> : <LoginButton />}
-  //     </Nav>
-  //   )
-  // }
   return (
-    <nav>
-        <h1>AlaCarte Restaurant</h1>
-        <AuthNav />
+    <Nav className="navlinks" style={{backgroundColor: "cornsilk"}}>
+      <h1 className="title">AlaCarte Restaurant</h1>
       <ul>
         <li> 
           <Link to='/'> Home </Link> 
@@ -31,8 +24,21 @@ function NavBar() {
           <Link to='/about_us'> About Us </Link>
         </li>        
       </ul>
-    </nav>
+        <p />
+        <AuthNav />
+    </Nav>
   )
 }
 
 export default NavBar;
+
+
+
+const Nav = styled.nav`
+  background: transparent;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+`;
+

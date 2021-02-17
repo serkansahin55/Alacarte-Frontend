@@ -35,14 +35,18 @@ function ReviewCard({id, text, rating, username, reviews, setReviews}) {
                 showEditReviewForm ? 
                     <EditReviewForm id={id} rating={rating} text={text} reviews={reviews} setReviews={setReviews} setEditReviewForm={setEditReviewForm} showEditReviewForm={showEditReviewForm} />
                 :
-                <div>
-                    <h2>Description: {text}</h2>
-                    <h3>Rated By: {username}</h3>
+                <li className="reviewz">
+                    <h2 style={{color: 'white'}}>{text}</h2>
+                    <h3 style={{color: 'white'}}>- {username}</h3>
                     <h3><StarRating totalStars={5} currentRating={rating} displayStar={true} /></h3>
-                    <button onClick={handleDeleteReview} type="button">Delete Review</button>
-                    <button onClick={handleEditReview} type="button">Edit Review</button>
+                    <button className="button" onClick={handleEditReview} type="button">Edit Review</button>
+                    <p />
+                    <button className="button" onClick={handleDeleteReview} type="button">Delete Review</button>
                     <hr />
-                </div>
+                    <br />
+                    <hr />
+                    <br />
+                </li>
             }         
         </div> 
     )
