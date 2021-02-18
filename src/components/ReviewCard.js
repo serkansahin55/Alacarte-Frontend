@@ -11,7 +11,7 @@ function ReviewCard({id, text, rating, username, reviews, setReviews}) {
     }
 
     function handleDeleteReview() {
-        fetch(`http://localhost:4000/api/v1/reviews/${id}`, {
+        fetch(`https://alacartepizza.herokuapp.com/api/v1/reviews/${id}`, {
             method: "DELETE",
             headers: {
               'Content-Type': 'application/json'
@@ -37,8 +37,8 @@ function ReviewCard({id, text, rating, username, reviews, setReviews}) {
                 :
                 <li className="reviewz">
                     <h2 style={{color: 'white'}}>{text}</h2>
+                    <StarRating totalStars={5} currentRating={rating} displayStar={true} />
                     <h3 style={{color: 'white'}}>- {username}</h3>
-                    <h3><StarRating totalStars={5} currentRating={rating} displayStar={true} /></h3>
                     <button className="button" onClick={handleEditReview} type="button">Edit Review</button>
                     <p />
                     <button className="button" onClick={handleDeleteReview} type="button">Delete Review</button>

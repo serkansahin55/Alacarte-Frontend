@@ -19,7 +19,7 @@ function MenuItemsContainer() {
     })
 
     function fetchMenuItems() {
-      fetch("http://localhost:4000/api/v1/menu_items")
+      fetch("https://alacartepizza.herokuapp.com/api/v1/menu_items")
       .then((r) => r.json())
       .then(menuItems => {
         setMenuItems(menuItems)
@@ -41,7 +41,7 @@ function MenuItemsContainer() {
         <Navbar />
         <H1>Menu</H1>
         <input className="search" type="text" placeholder="Search for pizza" onChange={e => setItemSearch(e.target.value)} />
-        <ul>
+        <ul className="ull">
             {menItems}
         </ul>
       </div>

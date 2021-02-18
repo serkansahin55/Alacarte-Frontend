@@ -11,7 +11,7 @@ function ReviewsContainer() {
   
 
     useEffect(() => {
-        fetch("http://localhost:4000/api/v1/reviews")
+        fetch("https://alacartepizza.herokuapp.com/api/v1/reviews")
           .then((r) => r.json())
           .then(reviews => {
             setReviews(reviews)

@@ -37,6 +37,7 @@
 
 
 .search {
+  display: flex;
   background-color: orange;
 }
 
@@ -44,6 +45,7 @@
 .star-rating {
     display: flex;    
     justify-content: space-around;
+    margin-left: 150px;
   }
   
   .star {
@@ -76,6 +78,8 @@
       37% 38%
     );
   }
+
+
   
   .star.selected {
     background-color: red;
@@ -152,6 +156,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-style: groove;
+    border-color: orange;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+    /* background-color: orange; */
   }
 
   .linkers {
@@ -233,6 +244,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-style: groove;
+    border-color: orange;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 10px;
   }
 
 

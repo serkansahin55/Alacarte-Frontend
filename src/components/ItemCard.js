@@ -8,11 +8,11 @@ function ItemCard({id, name, image, description, price, favorited, fetchMenuItem
         const data = {
             "favorite": {                
                 "menu_item_id": id,
-                "user_id": 3
+                "user_id": 1
             }
         }
     
-        fetch(`http://localhost:4000//api/v1/menu_items/${id}/delete_favorites`, {
+        fetch(`https://alacartepizza.herokuapp.com/api/v1/menu_items/${id}/delete_favorites`, {
           method: "DELETE",
           headers: {
             'Content-Type': 'application/json'
@@ -31,11 +31,11 @@ function ItemCard({id, name, image, description, price, favorited, fetchMenuItem
         const data = {
             "favorite": {                
                 "menu_item_id": id,
-                "user_id": 3
+                "user_id": 1
             }
         }
     
-        fetch("http://localhost:4000/api/v1/favorites", {
+        fetch("https://alacartepizza.herokuapp.com/api/v1/favorites", {
           method: "POST",
           headers: {
             'Content-Type': 'application/json'
@@ -49,20 +49,21 @@ function ItemCard({id, name, image, description, price, favorited, fetchMenuItem
     }
     return (
         <li className="items">
-            <h2 className="h2ele">
-                Name: {name} <span></span>
-                {
-                favorited ? 
-                    <button className="button-non-favorite" onClick={handleUnFavorite} type="button">Unfavorite It!</button>
-                    : 
-                    <button className="button" onClick={handleFavorite} type="button">Favorite It!</button>
-                }
-            </h2>
+          <br />
             <img src={image} alt={name} style={{width: "200px"}} /> 
-            <h2 className="h2ele">Description: {description}</h2>
+            <h2 className="h2ele">
+                {name}
+            </h2>
+            {
+              favorited ? 
+                <button className="button-non-favorite" onClick={handleUnFavorite} type="button">Unfavorite It!</button>
+                : 
+                <button className="button" onClick={handleFavorite} type="button">Favorite It!</button>
+            }
+            <h2 className="h2ele">{description}</h2>
             <h2 className="h2ele">${price}</h2>
-            <hr />
-        </li>
+            
+.        </li>
     )
 }
 

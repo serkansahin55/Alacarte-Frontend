@@ -17,12 +17,12 @@ function ReviewForm({ setReviews, reviews, showReviewForm, setShowReviewForm}) {
         "review": {
             "text": text,
             "rating": rating,
-            "user_id": 3,
-            "restaurant_id": 2
+            "user_id": 1,
+            "restaurant_id": 1
         }
     }
 
-    fetch("http://localhost:4000/api/v1/reviews", {
+    fetch("https://alacartepizza.herokuapp.com/api/v1/reviews", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

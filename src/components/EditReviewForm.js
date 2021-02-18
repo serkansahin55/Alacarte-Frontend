@@ -22,7 +22,7 @@ function EditReviewForm({ setReviews, reviews, showEditReviewForm, setEditReview
         }
     }
 
-    fetch(`http://localhost:4000/api/v1/reviews/${id}`, {
+    fetch(`https://alacarte-app-api.herokuapp.com/api/v1/reviews/${id}`, {
       method: "PUT",
       headers: {
         'Content-Type': 'application/json'
