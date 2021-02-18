@@ -8,37 +8,29 @@ function NavBar() {
 
 
   return (
-    <Nav className="navlinks" style={{backgroundColor: "cornsilk"}}>
+    <div className="navlinks" style={{backgroundColor: "cornsilk"}}>
       <h1 className="title">AlaCarte Restaurant</h1>
-      <ul>
+      <ul className="unordered">
         <li> 
-          <Link to='/'> Home </Link> 
+          <Link style={{ color: 'black' }} to='/'> Home </Link> 
         </li>
         <li> 
-          <Link to='/menu_items'> Menu Items </Link>
+          <Link style={{ color: 'black' }} to='/menu_items'> Menu Items </Link>
         </li>        
         <li> 
-          <Link to='/reviews'> Reviews </Link> 
+          <Link style={{ color: 'black' }} to='/reviews'> Reviews </Link> 
         </li>
         <li> 
-          <Link to='/about_us'> About Us </Link>
+          <Link style={{ color: 'black' }} to='/about_us'> Contact Us </Link>
         </li>        
       </ul>
-        <p />
+        {/* <p /> */}
         <AuthNav />
-    </Nav>
+    </div>
   )
 }
 
 export default NavBar;
 
 
-
-const Nav = styled.nav`
-  background: transparent;
-  height: 110px;
-  display: flex;
-  justify-content: center;
-  font-weight: 700;
-`;
 

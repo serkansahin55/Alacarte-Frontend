@@ -40,7 +40,7 @@ function MenuItemsContainer() {
       <div>
         <Navbar />
         <H1>Menu</H1>
-        <input type="text" placeholder="Search..." onChange={e => setItemSearch(e.target.value)} />
+        <input className="search" type="text" placeholder="Search for pizza" onChange={e => setItemSearch(e.target.value)} />
         <ul>
             {menItems}
         </ul>
